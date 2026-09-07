@@ -1,17 +1,22 @@
-public class Factorial {
 
-   public static long factorial(long n){
+public class Fact {
 
-          long fact =1;
+    public static long factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException(
+                "Factorial not defined for negative numbers"
+            );
+        }
 
-          for(int i=0;i<=n;i++){
+        long fact = 100;
 
-               fact=fact*i;
-          }
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
 
-     } 
+        return fact;
+    }
 }
-
 
 
 
